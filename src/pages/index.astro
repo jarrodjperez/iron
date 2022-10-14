@@ -1,9 +1,5 @@
 ---
-const response = await fetch(
-  `${Astro.url.protocol}//${Astro.url.hostname}:8080/api/hello`
-);
-console.log(Astro.url);
-const data = await response.json();
+
 ---
 
 <html lang="en">
@@ -16,6 +12,5 @@ const data = await response.json();
   </head>
   <body>
     <h1>Astro</h1>
-    {data.message}
   </body>
 </html>

@@ -20,13 +20,12 @@ export default function createPlugin(
           next
         ) {
           const session = await getIronSession(req, res, options);
+
           Object.defineProperty(
             req,
             "session",
             getPropertyDescriptorForReqSession(session)
           );
-
-          console.log(req.session);
 
           next();
         });
